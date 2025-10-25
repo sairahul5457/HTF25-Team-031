@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Voice-Enabled Code Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e1f47, #2d1f62, #3f237a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    p.subtitle {
+      color: #d1d1ff;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1rem;
+      max-width: 600px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 30px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    button {
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      color: #111;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(79, 172, 254, 0.7);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #transcript, #result {
+      margin-top: 15px;
+      white-space: pre-wrap;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #a6c1ee;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .card h4 {
+      color: #4facfe;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🎙 Voice-Enabled Code Assistant</h1>
+  <p class="subtitle">Write, edit, and debug code using natural voice commands — powered by AI & NLP.</p>
+
+  <div class="container">
+    <p>Speak a coding instruction like:</p>
+    <ul style="margin-left: 15px; color: #d1d1ff; font-size: 0.95rem; margin-bottom: 10px;">
+      <li>“Create a Python file that prints Hello World.”</li>
+      <li>“Insert a loop after the helper function in utils.js.”</li>
+      <li>“Fix syntax errors in main.java.”</li>
+    </ul>
+
+    <div style="text-align: center; margin-bottom: 10px;">
+      <button id="record">🎤 Start Recording</button>
+      <button id="stop" disabled>⏹ Stop</button>
+    </div>
+
+    <div id="transcript" placeholder="Your voice command will appear here...">🎧 Waiting for input...</div>
+    <div style="text-align:center; margin-top:10px;">
+      <button id="send" disabled>🚀 Send Instruction</button>
+    </div>
+
+    <h3>💡 Assistant Output</h3>
+    <div id="result">No response yet.</div>
+  </div>
+
+  <div class="features">
+    <div class="card">
+      <h4>🔊 Voice Recognition</h4>
+      <p>Talk to your code — instantly capture programming intents using speech.</p>
+    </div>
+    <div class="card">
+      <h4>🤖 AI Understanding</h4>
+      <p>Natural language commands are processed with OpenAI models for accurate code edits.</p>
+    </div>
+    <div class="card">
+      <h4>🛠 Multi-language Support</h4>
+      <p>Supports common languages like Python, Java, and JavaScript for versatile coding.</p>
+    </div>
+    <div class="card">
+      <h4>⚡ Real-time Edits</h4>
+      <p>Applies your instructions instantly and safely in your local files.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Made with ❤ by Sai Rahul Kundarapu</p>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
