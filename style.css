@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Segoe UI, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+header {
+  text-align: center;
+  background: #1e293b;
+  color: white;
+  padding: 2rem 1rem;
+}
+.tagline {
+  color: #a5b4fc;
+}
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgb(92, 82, 179);
+}
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin: 0.5rem;
+}
+button:hover {
+  background: #1d4ed8;
+}
+.demo {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.code-container {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  max-width: 800px;
+  width: 90%;
+}
+.copy-btn, .share-btn, .explain-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #10b981;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.copy-btn:hover, .share-btn:hover, .explain-btn:hover {
+  background: #059669;
+}
+pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-top: 0;
+}
+#syntax-errors {
+  color: #dc2626;
+  margin-top: 0.5rem;
+}
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.dark {
+  background: #23272f;
+  color: #f8fafc;
+}
+.dark header, .dark footer {
+  background: #111827;
+  color: #f8fafc;
+}

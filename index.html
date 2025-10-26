@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice-Enabled Code Assistant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Voice-Enabled Code Assistant</h1>
+    <p class="tagline">Code faster. Speak smarter.</p>
+    <button id="theme-toggle">Switch Mode</button>
+    <select id="language-select">
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+    </select>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Empowering developers to code with their voice</h2>
+      <button id="speak-btn">Start Voice Command</button>
+      <p id="output"></p>
+    </div>
+  </section>
+  <section class="demo">
+    <h2>Generated Code</h2>
+    <div class="code-container">
+      <pre><code id="code-block" class="language-python">Your generated code will appear here...</code></pre>
+      <button id="copy-btn">Copy Code</button>
+      <button id="share-btn">Share Code</button>
+      <button id="explain-btn">Explain Code</button>
+      <div id="syntax-errors"></div>
+    </div>
+    <h3>Voice Command History</h3>
+    <ul id="history-list"></ul>
+  </section>
+  <footer>
+    <p>2025 Voice-Enabled Code Assistant</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
